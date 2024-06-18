@@ -1,6 +1,6 @@
 resource "aws_key_pair" "webapp-key" {
   key_name   = "mykey"
-  public_key = file("~/.ssh/aws_key.pub")
+  public_key = file("${path.module}/aws_key.pub")
 }
 
 resource "aws_security_group" "webapp_sg" {
